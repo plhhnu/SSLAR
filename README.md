@@ -1,4 +1,4 @@
-# SSLAR:Deconvoluting spatial transcriptomics data with single-cell transcriptomes through semi-supervised NMF and least angle regression
+# SSLAR
 
 SSLAR conducted cell type annotation by leveraging single cell RNA sequencing and spatial transcriptomics data via machine learning.
 ![Fig1.jpg](pipeline.jpg)
@@ -9,7 +9,7 @@ All the data used in this article is shown below:
 
 ![Fig2.jpg](dataset.jpg)
 
-We provide a dataset for PBMC(smart-seq) as an example.
+We provide a dataset for mouse visual cortex as an example.
 
 ## Intsall
 The version under development is available on GitHub and can be installed as follows:
@@ -19,7 +19,7 @@ if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
 devtools::install_github("plhhnu/SSLAR")
 ```
-This package relies on the ssNMF and torch libraries, requiring a functional Python interpreter with these libraries installed. The installPython function offers a convenient method to set up a conda environment named SSLAR-env, which includes all necessary dependencies. While we recommend using this method to install Python libraries, you also have the option to customize the installation process.
+This package relies on the ssNMF library, requiring a functional Python interpreter with the library installed. The installPython function offers a convenient method to set up a conda environment named SSLAR-env, which includes all necessary dependencies. While we recommend using this method to install Python libraries, you also have the option to customize the installation process.
 ```r
 library("SSLAR")
 SSLAR::installPython()
